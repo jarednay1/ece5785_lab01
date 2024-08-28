@@ -30,7 +30,6 @@ else()
 endif()
 # End homebrew
 
-
 set(sdkVersion 2.0.0)
 set(toolchainVersion 13_2_Rel1)
 set(picotoolVersion 2.0.0)
