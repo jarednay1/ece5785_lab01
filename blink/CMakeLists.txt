@@ -78,4 +78,9 @@ target_include_directories(testing PRIVATE
   ${CMAKE_CURRENT_LIST_DIR}/.. # for our common lwipopts or any other standard includes, if required
 )
 
+# Add one more file
+if (PICO_CYW43_SUPPORTED)
+    target_link_libraries(blink pico_cyw43_arch_none)
+endif()
+
 pico_add_extra_outputs(testing)
