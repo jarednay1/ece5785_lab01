@@ -17,8 +17,6 @@ else()
 endif()
 
 # Homebrew from Ashton's code
-#set(sdkVersion 2.0.0)
-#set(toolchainVersion 13_2_Rel1)
 if(DEFINED ENV{PICO_SDK_PATH})
     set(PICO_SDK_PATH $ENV{PICO_SDK_PATH})
 else()
@@ -30,7 +28,11 @@ if(DEFINED ENV{PICO_TOOLCHAIN_PATH})
 else()
     set(PICO_TOOLCHAIN_PATH ${USERHOME}/.pico-sdk/toolchain/13_2_Rel1)
 endif()
+# End homebrew
 
+
+set(sdkVersion 2.0.0)
+set(toolchainVersion 13_2_Rel1)
 set(picotoolVersion 2.0.0)
 include(${USERHOME}/.pico-sdk/cmake/pico-vscode.cmake)
 # ====================================================================================
